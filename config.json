@@ -1,0 +1,6 @@
+{
+    "proxy": {
+        "url": "https://i.tukandev.xyz/",
+        "dir": "files/"
+    }
+}
