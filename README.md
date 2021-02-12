@@ -24,3 +24,11 @@ TukanImageHosting webserver that interacts with ShareX
   "Body": "Binary",
   "URL": "https://yourdomain.tld/$json:.url$"
 }
+```
+# .env file
+```
+UPLOAD_SECRET=changeme123
+PORT=3117
+HOST=0.0.0.0
+```
+
