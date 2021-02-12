@@ -1,6 +1,19 @@
 {
+    "general": {
+	 "color": "#36393e",
+	 "name": "TukanServices",
+	 "title": "Storage - Home"
+	},
     "proxy": {
-        "url": "https://i.tukandev.xyz/",
-        "dir": "files/"
-    }
+        "url": "https://yourdomain.tld/",
+        "dir": "raw/"
+    },
+	"lang": {
+	"wib": "Watch in browser",
+	"oib": "Open in browser",
+	"downl": "Download",
+	"videoh": "VideoHosting",
+	"imgh": "ImageHosting",
+	"fileh": "CloudStorage"
+	}
 }
