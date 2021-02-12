@@ -2,14 +2,15 @@
 TukanImageHosting webserver that interacts with ShareX
 
 
-#Installing
+# Installing
 1. download repo
 2. run npm install (in directory of project)
 3. make folder "files"
 4. modify .env file
 5. (optional) npm i pm2 -g / or use screen
 6. run it
-#ShareX config
+
+# ShareX config
 ```
 {
   "Version": "13.0.1",
