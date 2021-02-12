@@ -1,6 +1,6 @@
 {
   "name": "tukanimagehosting",
-  "version": "1.0.0",
+  "version": "1.2",
   "description": "Image Hosting service with a nice embed displays",
   "main": "tukanimages.js",
   "scripts": {
