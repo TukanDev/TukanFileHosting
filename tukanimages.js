@@ -14,7 +14,7 @@ tuki.use("/raw", express.static("files"))
 tuki.get('/', function(req, res) {
     res.send(`<html>
     <head>
-    <meta name="theme-color" content="#36393e">
+    <meta name="theme-color" content="#3edb09">
     <meta property="og:type" content="website">
     <meta property="og:title" content="${cfg.general.name} | ${cfg.general.title}">
     <meta property="og:site_name" content="${cfg.general.name} | ${cfg.general.title}" />
