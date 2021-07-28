@@ -85,7 +85,7 @@ tuki.get('/:url', function(req, res) {
         ${metah}
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="${cfg.general.name} | ${projectn}">
-        <meta name="twitter:image" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">
+        //<meta name="twitter:image" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">
         </head>
         <body>
         ${formatbody}
