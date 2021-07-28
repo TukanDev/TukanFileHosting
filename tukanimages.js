@@ -14,7 +14,7 @@ tuki.use("/raw", express.static("files"))
 tuki.get('/', function(req, res) {
     res.send(`<html>
     <head>
-    <meta name="theme-color" content="#3edb09">
+    <meta name="theme-color" content="#36393e">
     <meta property="og:type" content="website">
     <meta property="og:title" content="${cfg.general.name} | ${cfg.general.title}">
     <meta property="og:site_name" content="${cfg.general.name} | ${cfg.general.title}" />
@@ -45,14 +45,24 @@ tuki.get('/:url', function(req, res) {
 		
 		switch(rformat[1]) {
 		case "mp4":
-			formatbody = `<video><source src="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}" type="video/mp4"></video>`
-			metah = `<meta property="og:video:type" content="video/mp4"/>\n<meta property="og:video" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">`
+			formatbody = `<video controls><source src="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}" type="video/mp4"></video>`
+			metah = `<meta property="og:video:type" content="video/mp4">\n
+			<meta property="og:video" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">\n
+			<meta property="og:video:secure_url" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">\n
+			<meta property="og:video:width" content="720"/>\n<meta property="og:video:height" content="480"/>\n
+			<meta name="twitter:card"                       content="player" />\n
+            <meta name="twitter:image"                      content="" />\n
+            <meta name="twitter:player:width"               content="640" />\n
+            <meta name="twitter:player:height"              content="640" />\n
+            <meta name="twitter:player:stream"              content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}" />\n
+            <meta name="twitter:player:stream:content_type" content="video/mp4" />`
 		    projectn = `${cfg.lang.videoh}`
 		    htitle = `${cfg.lang.wib}`
 			break;
 		case "png":
 			formatbody = `<img src="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}"></img>`
-			metah = `<meta property="og:image" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">`
+			metah = `<meta property="og:image" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">\n
+			<meta name="twitter:card" content="summary_large_image">`
 			projectn = `${cfg.lang.imgh}`
 			htitle = `${cfg.lang.oib}`
 			break;
@@ -83,9 +93,7 @@ tuki.get('/:url', function(req, res) {
         <meta property="og:title" content="${htitle}">
         <meta property="og:site_name" content="${cfg.general.name} | ${projectn}" />
         ${metah}
-        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="${cfg.general.name} | ${projectn}">
-        //<meta name="twitter:image" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">
         </head>
         <body>
         ${formatbody}
