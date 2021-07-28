@@ -45,8 +45,8 @@ tuki.get('/:url', function(req, res) {
 		
 		switch(rformat[1]) {
 		case "mp4":
-			formatbody = `<video controls="" autoplay="" name="media"><source src="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}" type="video/mp4"></video>`
-			metah = `<meta property="og:video" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">`
+			formatbody = `<video><source src="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}" type="video/mp4"></video>`
+			metah = `<meta property="og:video:type" content="video/mp4"/>\n<meta property="og:video" content="${cfg.proxy.url}${cfg.proxy.dir}${req.params.url}">`
 		    projectn = `${cfg.lang.videoh}`
 		    htitle = `${cfg.lang.wib}`
 			break;
